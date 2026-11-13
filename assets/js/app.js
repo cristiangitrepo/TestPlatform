@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showLoading(true);
         hideError();
         try {
-            const response = await fetch('../../data/test.json'); // Ajusta la ruta si es necesario
+            const response = await fetch('./TestPlatform//data/test.json'); // Ajusta la ruta si es necesario
             if (!response.ok) throw new Error('No se pudo cargar el listado de exámenes.');
             const data = await response.json();
             
