@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor CRUD de Tests JSON</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header
+        class="bg-indigo-600 text-white shadow-md py-6 px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+            <h1 class="text-2xl font-bold flex items-center gap-2">
+                <i class="fa-solid fa-file-code"></i> Gestor y Creador de Tests JSON
+            </h1>
+            <p class="text-indigo-100 text-sm mt-1">Crea, edita y exporta tus cuestionarios manteniendo la estructura
+                oficial.</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+            <label
+                class="cursor-pointer bg-indigo-700 hover:bg-indigo-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-2 shadow">
+                <i class="fa-solid fa-upload"></i> Importar JSON
+                <input type="file" id="importFile" accept=".json" class="hidden" onchange="importarJSON(event)">
+            </label>
+            <button onclick="nuevoTest()"
+                class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-2 shadow">
+                <i class="fa-solid fa-plus"></i> Nuevo Test
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow container mx-auto px-4 py-8 max-w-5xl">
+
+        <!-- Vista de Listado de Tests -->
+        <div id="listView">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-semibold text-slate-700">Tests Disponibles</h2>
+                <span id="testCount"
+                    class="bg-indigo-100 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-full">0 tests</span>
+            </div>
+
+            <div id="testGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Se rellena dinámicamente -->
+            </div>
+
+            <div id="emptyState"
+                class="hidden text-center py-16 bg-white rounded-xl border border-dashed border-slate-300 shadow-sm mt-4">
+                <i class="fa-solid fa-folder-open text-slate-300 text-5xl mb-3"></i>
+                <h3 class="text-lg font-medium text-slate-600">No hay tests creados</h3>
+                <p class="text-slate-400 text-sm mt-1">Empieza creando uno nuevo o importando un fichero JSON.</p>
+            </div>
+        </div>
+
+        <!-- Vista de Editor (Oculta por defecto) -->
+        <div id="editorView" class="hidden bg-white rounded-xl shadow-lg border border-slate-200 p-6 md:p-8">
+            <div class="flex justify-between items-center border-b border-slate-100 pb-4 mb-6">
+                <h2 id="editorTitle" class="text-xl font-bold text-slate-800">Editar Test</h2>
+                <button onclick="volverAlListado()"
+                    class="text-slate-500 hover:text-slate-700 font-medium text-sm flex items-center gap-1">
+                    <i class="fa-solid fa-arrow-left"></i> Volver
+                </button>
+            </div>
+
+            <form id="testForm" onsubmit="guardarTest(event)" class="space-y-6">
+                <!-- Información General del Test -->
+                <div class="grid grid-cols-1 gap-4 bg-slate-50 p-4 rounded-lg border border-slate-200">
+                    <h3 class="font-semibold text-slate-700 text-sm uppercase tracking-wider">Información General</h3>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-600 mb-1">Título del Test</label>
+                        <input type="text" id="testTitulo" required
+                            class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-600 mb-1">Descripción</label>
+                        <textarea id="testDescripcion" rows="2" required
+                            class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm"></textarea>
+                    </div>
+                </div>
+
+                <!-- Preguntas -->
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-semibold text-slate-700 text-sm uppercase tracking-wider">Preguntas del Test
+                        </h3>
+                        <button type="button" onclick="agregarPregunta()"
+                            class="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 border border-indigo-200">
+                            <i class="fa-solid fa-plus"></i> Añadir Pregunta
+                        </button>
+                    </div>
+
+                    <div id="preguntasContainer" class="space-y-6">
+                        <!-- Las preguntas se inyectan aquí -->
+                    </div>
+                </div>
+
+                <!-- Botones de Acción -->
+                <div class="flex items-center justify-end gap-3 pt-4 border-t border-slate-100">
+                    <button type="button" onclick="volverAlListado()"
+                        class="px-4 py-2 border border-slate-300 text-slate-600 rounded-lg text-sm font-medium hover:bg-slate-100 transition">
+                        Cancelar
+                    </button>
+                    <button type="submit"
+                        class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg text-sm font-medium transition shadow flex items-center gap-2">
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar Test
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-400">
+        Gestor de Cuestionarios JSON &bull; Compatible con estructura estándar
+    </footer>
+
+    <!-- Script de lógica de la aplicación -->
+    <script>
+        let tests = JSON.parse(localStorage.getItem('crud_tests')) || [];
+        let editingIndex = null;
+
+        // Inicializar datos de ejemplo si localStorage está vacío
+        if (tests.length === 0) {
+            // Cargar el test de ejemplo proporcionado por defecto
+            tests.push({
+                "titulo": "UF1302: Elaboración de páginas web con HTML",
+                "descripcion": "Conceptos básicos y estructura de documentos HTML5, editores, imágenes y accesibilidad.",
+                "preguntas": [
+                    {
+                        "pregunta": "¿Qué es el elemento <html></html>?",
+                        "traduccion": "Elemento raíz contenedor de todos los datos de la página web.",
+                        "opciones": [
+                            { "id": 1, "enunciado": "El elemento raíz del documento", "traduccion": "Contenedor de todos los datos de la página web", "correcta": true },
+                            { "id": 2, "enunciado": "Un metadato técnico", "traduccion": "Información solo para buscadores", "correcta": false },
+                            { "id": 3, "enunciado": "El cuerpo visible de la página", "traduccion": "Contenido mostrado al usuario", "correcta": false },
+                            { "id": 4, "enunciado": "Una etiqueta de imagen", "traduccion": "Elemento multimedia", "correcta": false }
+                        ]
+                    }
+                ]
+            });
+            guardarEnStorage();
+        }
+
+        renderList();
+
+        function guardarEnStorage() {
+            localStorage.setItem('crud_tests', JSON.stringify(tests));
+        }
+
+        function renderList() {
+            const grid = document.getElementById('testGrid');
+            const emptyState = document.getElementById('emptyState');
+            const countBadge = document.getElementById('testCount');
+
+            grid.innerHTML = '';
+            countBadge.textContent = `${tests.length} test${tests.length === 1 ? '' : 's'}`;
+
+            if (tests.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            tests.forEach((test, index) => {
+                const card = document.createElement('div');
+                card.className = "bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between gap-4";
+
+                card.innerHTML = `
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-lg line-clamp-1">${escapeHtml(test.titulo)}</h3>
+                        <p class="text-slate-500 text-xs mt-1 line-clamp-2">${escapeHtml(test.descripcion)}</p>
+                        <div class="mt-3 flex items-center gap-2">
+                            <span class="bg-slate-100 text-slate-600 text-xs font-medium px-2.5 py-0.5 rounded">
+                                <i class="fa-solid fa-circle-question mr-1"></i> ${test.preguntas ? test.preguntas.length : 0} preguntas
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-end gap-2 pt-3 border-t border-slate-100">
+                        <button onclick="exportarTestJSON(${index})" title="Descargar JSON" class="p-2 text-slate-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition">
+                            <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button onclick="editarTest(${index})" title="Editar" class="p-2 text-slate-600 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                        <button onclick="eliminarTest(${index})" title="Eliminar" class="p-2 text-slate-600 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function nuevoTest() {
+            editingIndex = null;
+            document.getElementById('editorTitle').textContent = "Crear Nuevo Test";
+            document.getElementById('testTitulo').value = '';
+            document.getElementById('testDescripcion').value = '';
+            document.getElementById('preguntasContainer').innerHTML = '';
+
+            // Añadir una pregunta vacía por defecto
+            agregarPregunta();
+
+            document.getElementById('listView').classList.add('hidden');
+            document.getElementById('editorView').classList.remove('hidden');
+        }
+
+        function editarTest(index) {
+            editingIndex = index;
+            const test = tests[index];
+            document.getElementById('editorTitle').textContent = "Editar Test: " + test.titulo;
+            document.getElementById('testTitulo').value = test.titulo;
+            document.getElementById('testDescripcion').value = test.descripcion;
+
+            const container = document.getElementById('preguntasContainer');
+            container.innerHTML = '';
+
+            test.preguntas.forEach((p, pIndex) => {
+                agregarPreguntaConDatos(p, pIndex);
+            });
+
+            document.getElementById('listView').classList.add('hidden');
+            document.getElementById('editorView').classList.remove('hidden');
+        }
+
+        function volverAlListado() {
+            document.getElementById('editorView').classList.add('hidden');
+            document.getElementById('listView').classList.remove('hidden');
+            renderList();
+        }
+
+        function agregarPregunta() {
+            const container = document.getElementById('preguntasContainer');
+            const pIndex = container.children.length;
+
+            const pDiv = document.createElement('div');
+            pDiv.className = "p-4 bg-slate-50 border border-slate-200 rounded-lg space-y-3 relative pregunta-card";
+            pDiv.innerHTML = `
+                <div class="flex justify-between items-center">
+                    <span class="text-xs font-bold text-slate-500 uppercase">Pregunta #${pIndex + 1}</span>
+                    <button type="button" onclick="this.closest('.pregunta-card').remove()" class="text-rose-500 hover:text-rose-700 text-xs font-medium flex items-center gap-1">
+                        <i class="fa-solid fa-trash"></i> Eliminar Pregunta
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-600 mb-1">Enunciado de la pregunta</label>
+                        <input type="text" name="pregunta-enunciado" required class="w-full px-3 py-1.5 border border-slate-300 rounded text-sm focus:ring-1 focus:ring-indigo-500 focus:outline-none" placeholder="¿Qué es...?">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-600 mb-1">Traducción / Explicación breve</label>
+                        <input type="text" name="pregunta-traduccion" required class="w-full px-3 py-1.5 border border-slate-300 rounded text-sm focus:ring-1 focus:ring-indigo-500 focus:outline-none" placeholder="Traducción o resumen...">
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <label class="block text-xs font-medium text-slate-600 mb-1">Opciones de respuesta (marca la correcta)</label>
+                    <div class="space-y-2 opciones-container">
+                        <!-- 4 opciones por defecto -->
+                        ${generarOpcionesHTML([
+                { id: 1, enunciado: "", traduccion: "", correcta: true },
+                { id: 2, enunciado: "", traduccion: "", correcta: false },
+                { id: 3, enunciado: "", traduccion: "", correcta: false },
+                { id: 4, enunciado: "", traduccion: "", correcta: false }
+            ])}
+                    </div>
+                </div>
+            `;
+            container.appendChild(pDiv);
+        }
+
+        function agregarPreguntaConDatos(pData, pIndex) {
+            const container = document.getElementById('preguntasContainer');
+            const pDiv = document.createElement('div');
+            pDiv.className = "p-4 bg-slate-50 border border-slate-200 rounded-lg space-y-3 relative pregunta-card";
+            pDiv.innerHTML = `
+                <div class="flex justify-between items-center">
+                    <span class="text-xs font-bold text-slate-500 uppercase">Pregunta #${pIndex + 1}</span>
+                    <button type="button" onclick="this.closest('.pregunta-card').remove()" class="text-rose-500 hover:text-rose-700 text-xs font-medium flex items-center gap-1">
+                        <i class="fa-solid fa-trash"></i> Eliminar Pregunta
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-600 mb-1">Enunciado de la pregunta</label>
+                        <input type="text" name="pregunta-enunciado" value="${escapeHtml(pData.pregunta || '')}" required class="w-full px-3 py-1.5 border border-slate-300 rounded text-sm focus:ring-1 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-600 mb-1">Traducción / Explicación breve</label>
+                        <input type="text" name="pregunta-traduccion" value="${escapeHtml(pData.traduccion || '')}" required class="w-full px-3 py-1.5 border border-slate-300 rounded text-sm focus:ring-1 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <label class="block text-xs font-medium text-slate-600 mb-1">Opciones de respuesta (marca la correcta)</label>
+                    <div class="space-y-2 opciones-container">
+                        ${generarOpcionesHTML(pData.opciones)}
+                    </div>
+                </div>
+            `;
+            container.appendChild(pDiv);
+        }
+
+        function generarOpcionesHTML(opciones) {
+            return opciones.map((opt, index) => `
+                <div class="flex items-center gap-2 opcion-row">
+                    <input type="radio" name="correcta-radio-${Math.random().toString(36.substring(2))}" ${opt.correcta ? 'checked' : ''} class="opcion-correcta-radio text-indigo-600 focus:ring-indigo-500 h-4 w-4" title="Marcar como correcta">
+                    <input type="text" value="${escapeHtml(opt.enunciado || '')}" placeholder="Enunciado opción ${index + 1}" required class="flex-grow px-2.5 py-1 border border-slate-300 rounded text-xs option-enunciado">
+                    <input type="text" value="${escapeHtml(opt.traduccion || '')}" placeholder="Traducción opcional" class="w-1/3 px-2.5 py-1 border border-slate-300 rounded text-xs option-traduccion">
+                </div>
+            `).join('');
+        }
+
+        function guardarTest(event) {
+            event.preventDefault();
+
+            const titulo = document.getElementById('testTitulo').value.trim();
+            const descripcion = document.getElementById('testDescripcion').value.trim();
+            const preguntaCards = document.querySelectorAll('.pregunta-card');
+
+            if (preguntaCards.length === 0) {
+                alert('Debes añadir al menos una pregunta.');
+                return;
+            }
+
+            const preguntas = [];
+
+            for (let card of preguntaCards) {
+                const pregunta = card.querySelector('[name="pregunta-enunciado"]').value.trim();
+                const traduccion = card.querySelector('[name="pregunta-traduccion"]').value.trim();
+                const opcionRows = card.querySelectorAll('.opcion-row');
+
+                const opciones = [];
+                let tieneCorrecta = false;
+
+                opcionRows.forEach((row, oIndex) => {
+                    const correcta = row.querySelector('.opcion-correcta-radio').checked;
+                    if (correcta) tieneCorrecta = true;
+
+                    opciones.push({
+                        id: oIndex + 1,
+                        enunciado: row.querySelector('.option-enunciado').value.trim(),
+                        traduccion: row.querySelector('.option-traduccion').value.trim(),
+                        correcta: correcta
+                    });
+                });
+
+                if (!tieneCorrecta) {
+                    alert(`La pregunta "${pregunta}" debe tener una opción marcada como correcta.`);
+                    return;
+                }
+
+                preguntas.push({
+                    pregunta,
+                    traduccion,
+                    opciones
+                });
+            }
+
+            const testObj = {
+                titulo,
+                descripcion,
+                preguntas
+            };
+
+            if (editingIndex !== null) {
+                tests[editingIndex] = testObj;
+            } else {
+                tests.push(testObj);
+            }
+
+            guardarEnStorage();
+            volverAlListado();
+        }
+
+        function eliminarTest(index) {
+            if (confirm('¿Estás seguro de que deseas eliminar este test?')) {
+                tests.splice(index, 1);
+                guardarEnStorage();
+                renderList();
+            }
+        }
+
+        function exportarTestJSON(index) {
+            const test = tests[index];
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(test, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", `${test.titulo.toLowerCase().replace(/[^a-z0-9]/g, '_')}.json`);
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+        }
+
+        function importarJSON(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                try {
+                    const json = JSON.parse(e.target.result);
+                    if (!json.titulo || !json.preguntas || !Array.isArray(json.preguntas)) {
+                        throw new Error('El formato JSON no coincide con la estructura requerida.');
+                    }
+                    tests.push(json);
+                    guardarEnStorage();
+                    renderList();
+                    alert('Test importado correctamente.');
+                } catch (err) {
+                    alert('Error al importar el fichero JSON: ' + err.message);
+                }
+                event.target.value = ''; // limpiar input
+            };
+            reader.readAsText(file);
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(> g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+
+</html>
