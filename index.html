@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma de exámenes online">
+    <title>Exámenes Online</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="brand">
+                <span class="brand-icon">E</span>
+                <div>
+                    <h1>Exámenes Online</h1>
+                    <p>Plataforma de evaluación</p>
+                </div>
+            </div>
+
+            <div class="header-info">
+                <span class="status-dot"></span>
+                Sistema de evaluación
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- SELECTOR DE EXÁMENES -->
+        <section class="exam-selector">
+            <div>
+                <h2>Mis exámenes</h2>
+                <p>Selecciona el test que deseas realizar.</p>
+            </div>
+
+            <div class="selector-control">
+                <label for="testSelector">Seleccionar examen</label>
+                <select id="testSelector">
+                    <option value="">Cargando exámenes...</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- PANEL DEL EXAMEN -->
+        <section class="exam-panel" id="examPanel" hidden>
+
+            <div class="exam-header">
+                <div>
+                    <span class="eyebrow">EXAMEN ONLINE</span>
+                    <h2 id="examTitle">HTML5 y CSS3</h2>
+                    <p id="examDescription"></p>
+                </div>
+
+                <div class="question-counter">
+                    <span>Pregunta</span>
+                    <strong>
+                        <span id="currentQuestion">1</span>
+                        <small>/ <span id="totalQuestions">0</span></small>
+                    </strong>
+                </div>
+            </div>
+
+            <!-- PROGRESO -->
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span>Progreso del examen</span>
+                    <span id="progressPercentage">0%</span>
+                </div>
+
+                <div class="progress-track" role="progressbar" aria-label="Progreso del examen" aria-valuemin="0"
+                    aria-valuemax="100" aria-valuenow="0" id="progressBar">
+
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <!-- PREGUNTAS -->
+            <div class="question-area" id="questionArea">
+
+                <div class="question-heading">
+                    <span class="question-number" id="questionNumber">01</span>
+                    <span class="question-label">PREGUNTA</span>
+                </div>
+
+                <h3 id="questionText" tabindex="-1"></h3>
+
+                <p class="translation" id="questionTranslation"></p>
+
+                <!-- OPCIONES -->
+                <fieldset class="options-container">
+                    <legend>Selecciona una respuesta</legend>
+                    <div id="optionsList"></div>
+                </fieldset>
+
+            </div>
+
+            <!-- NAVEGACIÓN -->
+            <div class="exam-footer">
+
+                <button type="button" class="btn btn-secondary" id="prevButton">
+                    ← Anterior
+                </button>
+
+                <span class="answered-info" id="answeredInfo">
+                    0 respuestas seleccionadas
+                </span>
+
+                <button type="button" class="btn btn-primary" id="nextButton">
+                    Siguiente →
+                </button>
+
+                <button type="button" class="btn btn-success" id="finishButton" hidden>
+                    Finalizar examen ✓
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- RESULTADOS -->
+        <section class="result-panel" id="resultPanel" hidden>
+
+            <div class="result-icon">✓</div>
+
+            <span class="eyebrow">EXAMEN FINALIZADO</span>
+
+            <h2>Resultado del examen</h2>
+
+            <div class="score-circle">
+                <strong id="scorePercentage">0%</strong>
+                <span>Nota obtenida</span>
+            </div>
+
+            <div class="result-stats">
+
+                <div>
+                    <strong id="correctAnswers">0</strong>
+                    <span>Correctas</span>
+                </div>
+
+                <div>
+                    <strong id="incorrectAnswers">0</strong>
+                    <span>Incorrectas</span>
+                </div>
+
+                <div>
+                    <strong id="unansweredAnswers">0</strong>
+                    <span>Sin responder</span>
+                </div>
+
+            </div>
+
+            <p id="resultMessage"></p>
+
+            <div class="result-actions">
+
+                <button type="button" class="btn btn-secondary" id="reviewButton">
+                    Revisar respuestas
+                </button>
+
+                <button type="button" class="btn btn-primary" id="restartButton">
+                    Repetir examen
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- CARGA -->
+        <div class="loading-message" id="loadingMessage" hidden>
+            Cargando examen...
+        </div>
+
+        <!-- ERRORES -->
+        <div class="error-message" id="errorMessage" role="alert" hidden>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>Exámenes Online · Plataforma de aprendizaje y evaluación</p>
+    </footer>
