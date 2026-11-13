@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         progressPercentage.textContent = `${percentage}%`;
         progressFill.style.width = `${percentage}%`;
-        progressTrack.setAttribute('aria-valuenow', percentage);
+        // progressTrack.setAttribute('aria-valuenow', percentage);
 
         answeredInfo.textContent = `${answeredCount} de ${total} respuestas seleccionadas`;
     }
