@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showLoading(true);
         hideError();
         try {
-            const response = await fetch('https://github.com/cristiangitrepo/TestPlatform/blob/ac71cf0215840a4af18eb270902ee798958544f3/data/test.json'); // Ajusta la ruta si es necesario
+            const response = await fetch('../../data/test.json'); // Ajusta la ruta si es necesario
             if (!response.ok) throw new Error('No se pudo cargar el listado de exámenes.');
             const data = await response.json();
             
