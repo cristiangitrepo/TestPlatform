@@ -1,0 +1,187 @@
+
+{
+  "titulo": "HTML5 y CSS3",
+  "descripcion": "Evaluación de conocimientos de desarrollo web.",
+  "preguntas": [
+    {
+      "pregunta": "What is the main purpose of HTML5?",
+      "traduccion": "¿Cuál es el propósito principal de HTML5?",
+      "opciones": [
+        {
+          "id": 1,
+          "enunciado": "To define the structure of web pages",
+          "traduccion": "Definir la estructura de las páginas web",
+          "correcta": true
+        },
+        {
+          "id": 2,
+          "enunciado": "To manage databases",
+          "traduccion": "Gestionar bases de datos",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "enunciado": "To create operating systems",
+          "traduccion": "Crear sistemas operativos",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "enunciado": "To configure web servers",
+          "traduccion": "Configurar servidores web",
+          "correcta": false
+        }
+      ]
+    },
+    {
+      "pregunta": "Which HTML5 tag represents the main content of a document?",
+      "traduccion": "¿Qué etiqueta HTML5 representa el contenido principal de un documento?",
+      "opciones": [
+        {
+          "id": 1,
+          "enunciado": "<section>",
+          "traduccion": "Sección de contenido",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "enunciado": "<main>",
+          "traduccion": "Contenido principal",
+          "correcta": true
+        },
+        {
+          "id": 3,
+          "enunciado": "<footer>",
+          "traduccion": "Pie de página",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "enunciado": "<aside>",
+          "traduccion": "Contenido complementario",
+          "correcta": false
+        }
+      ]
+    },
+    {
+      "pregunta": "Which HTML5 element is used to play video without external plugins?",
+      "traduccion": "¿Qué elemento HTML5 se utiliza para reproducir vídeo sin complementos externos?",
+      "opciones": [
+        {
+          "id": 1,
+          "enunciado": "<media>",
+          "traduccion": "Elemento media",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "enunciado": "<movie>",
+          "traduccion": "Elemento movie",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "enunciado": "<video>",
+          "traduccion": "Elemento de vídeo",
+          "correcta": true
+        },
+        {
+          "id": 4,
+          "enunciado": "<player>",
+          "traduccion": "Elemento player",
+          "correcta": false
+        }
+      ]
+    },
+    {
+      "pregunta": "What does CSS stand for?",
+      "traduccion": "¿Qué significan las siglas CSS?",
+      "opciones": [
+        {
+          "id": 1,
+          "enunciado": "Computer Style Sheets",
+          "traduccion": "Hojas de estilo de ordenador",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "enunciado": "Creative Style System",
+          "traduccion": "Sistema de estilos creativos",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "enunciado": "Cascading Style Sheets",
+          "traduccion": "Hojas de estilo en cascada",
+          "correcta": true
+        },
+        {
+          "id": 4,
+          "enunciado": "Computer Styling System",
+          "traduccion": "Sistema de diseño informático",
+          "correcta": false
+        }
+      ]
+    },
+    {
+      "pregunta": "Which CSS property changes the background color of an element?",
+      "traduccion": "¿Qué propiedad CSS cambia el color de fondo de un elemento?",
+      "opciones": [
+        {
+          "id": 1,
+          "enunciado": "color",
+          "traduccion": "Color del texto",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "enunciado": "background-color",
+          "traduccion": "Color de fondo",
+          "correcta": true
+        },
+        {
+          "id": 3,
+          "enunciado": "font-color",
+          "traduccion": "Color de fuente",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "enunciado": "background-style",
+          "traduccion": "Estilo de fondo",
+          "correcta": false
+        }
+      ]
+    },
+    {
+      "pregunta": "Which CSS layout system is designed for two-dimensional layouts?",
+      "traduccion": "¿Qué sistema de diseño CSS está pensado para distribuciones bidimensionales?",
+      "opciones": [
+        {
+          "id": 1,
+          "enunciado": "Float",
+          "traduccion": "Flotación de elementos",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "enunciado": "Inline",
+          "traduccion": "Visualización en línea",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "enunciado": "Flexbox",
+          "traduccion": "Diseño flexible unidimensional",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "enunciado": "CSS Grid",
+          "traduccion": "Sistema de cuadrícula bidimensional",
+          "correcta": true
+        }
+      ]
+    }
+  ]
+}

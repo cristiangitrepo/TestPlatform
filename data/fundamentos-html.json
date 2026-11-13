@@ -1,0 +1,97 @@
+
+{
+  "titulo": "Fundamentos de HTML5",
+  "descripcion": "Conceptos básicos del lenguaje HTML.",
+  "preguntas": [
+    {
+      "pregunta": "Which declaration defines an HTML5 document?",
+      "traduccion": "¿Qué declaración define un documento HTML5?",
+      "opciones": [
+        {
+          "id": 1,
+          "enunciado": "<!DOCTYPE html>",
+          "traduccion": "Declaración del tipo de documento HTML5",
+          "correcta": true
+        },
+        {
+          "id": 2,
+          "enunciado": "<HTML5>",
+          "traduccion": "Etiqueta HTML5",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "enunciado": "<DOCTYPE>",
+          "traduccion": "Etiqueta DOCTYPE",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "enunciado": "<document html>",
+          "traduccion": "Documento HTML",
+          "correcta": false
+        }
+      ]
+    },
+    {
+      "pregunta": "Which tag defines a hyperlink?",
+      "traduccion": "¿Qué etiqueta define un hipervínculo?",
+      "opciones": [
+        {
+          "id": 1,
+          "enunciado": "<link>",
+          "traduccion": "Enlace de recursos externos",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "enunciado": "<a>",
+          "traduccion": "Ancla o enlace",
+          "correcta": true
+        },
+        {
+          "id": 3,
+          "enunciado": "<href>",
+          "traduccion": "Atributo de dirección",
+          "correcta": false
+        },
+        {
+          "id": 4,
+          "enunciado": "<url>",
+          "traduccion": "Dirección URL",
+          "correcta": false
+        }
+      ]
+    },
+    {
+      "pregunta": "Which attribute provides alternative text for an image?",
+      "traduccion": "¿Qué atributo proporciona un texto alternativo para una imagen?",
+      "opciones": [
+        {
+          "id": 1,
+          "enunciado": "title",
+          "traduccion": "Título",
+          "correcta": false
+        },
+        {
+          "id": 2,
+          "enunciado": "src",
+          "traduccion": "Ruta de la imagen",
+          "correcta": false
+        },
+        {
+          "id": 3,
+          "enunciado": "alt",
+          "traduccion": "Texto alternativo",
+          "correcta": true
+        },
+        {
+          "id": 4,
+          "enunciado": "description",
+          "traduccion": "Descripción",
+          "correcta": false
+        }
+      ]
+    }
+  ]
+}

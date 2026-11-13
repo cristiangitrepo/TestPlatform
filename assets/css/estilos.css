@@ -1,0 +1,683 @@
+/* ==========================================
+   VARIABLES Y CONFIGURACIÓN GENERAL
+========================================== */
+
+:root {
+    --primary: #5968d9;
+    --primary-dark: #4553bf;
+    --success: #20b486;
+    --danger: #ed6475;
+    --background: #f3f5fb;
+    --surface: #ffffff;
+    --text: #252c45;
+    --muted: #8b91a7;
+    --border: #e5e8f1;
+    --shadow: 0 8px 30px rgba(43, 52, 92, .07);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+button,
+select {
+    font: inherit;
+}
+
+/* ==========================================
+   CABECERA
+========================================== */
+
+.header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-content {
+    max-width: 1150px;
+    margin: auto;
+    padding: 22px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 13px;
+    background: var(--primary);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.brand h1 {
+    font-size: 19px;
+}
+
+.brand p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+.header-info {
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--success);
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+========================================== */
+
+.container {
+    width: min(100% - 32px, 950px);
+    margin: 45px auto;
+    flex: 1;
+}
+
+/* ==========================================
+   SELECTOR DE EXÁMENES
+========================================== */
+
+.exam-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.exam-selector h2 {
+    font-size: 21px;
+    margin-bottom: 6px;
+}
+
+.exam-selector p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.selector-control {
+    min-width: 260px;
+}
+
+.selector-control label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.selector-control select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: white;
+    color: var(--text);
+    outline: none;
+    cursor: pointer;
+}
+
+.selector-control select:focus {
+    border-color: var(--primary);
+}
+
+/* ==========================================
+   PANEL DEL EXAMEN
+========================================== */
+
+.exam-panel {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: var(--shadow);
+}
+
+.exam-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.exam-header h2 {
+    font-size: 24px;
+    margin: 9px 0;
+}
+
+.exam-header p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.question-counter {
+    background: #f1f2ff;
+    color: var(--primary);
+    border-radius: 12px;
+    padding: 12px 18px;
+    text-align: center;
+    min-width: 105px;
+}
+
+.question-counter span {
+    display: block;
+    font-size: 11px;
+}
+
+.question-counter strong {
+    font-size: 25px;
+}
+
+.question-counter small {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* ==========================================
+   BARRA DE PROGRESO
+========================================== */
+
+.progress-container {
+    margin: 30px 0 40px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.progress-info span:last-child {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.progress-track {
+    height: 7px;
+    background: #eceefa;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0;
+    background: var(--primary);
+    border-radius: 20px;
+    transition: width .3s ease;
+}
+
+/* ==========================================
+   PREGUNTAS
+========================================== */
+
+.question-area {
+    margin-bottom: 35px;
+}
+
+.question-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.question-number {
+    width: 35px;
+    height: 35px;
+    background: #f0f1ff;
+    color: var(--primary);
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+.question-label {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--muted);
+}
+
+.question-area h3 {
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.translation {
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 28px;
+}
+
+/* ==========================================
+   OPCIONES TIPO TARJETA
+========================================== */
+
+.options-container {
+    border: 0;
+    min-width: 0;
+}
+
+.options-container legend {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 13px;
+    color: var(--muted);
+}
+
+#optionsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.option-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 83px;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    cursor: pointer;
+    transition: all .2s ease;
+    position: relative;
+    background: white;
+}
+
+.option-card:hover {
+    border-color: var(--primary);
+    background: #fafaff;
+}
+
+.option-card input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.option-card:focus-within {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.option-card:has(input:checked) {
+    border: 2px solid var(--primary);
+    background: #f4f4ff;
+    padding: 14px;
+}
+
+.option-letter {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: #f1f2f7;
+    color: #727990;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.option-card:has(input:checked) .option-letter {
+    background: var(--primary);
+    color: white;
+}
+
+.option-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 0;
+}
+
+.option-text strong {
+    font-size: 13px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.option-text small {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.radio-indicator {
+    width: 17px;
+    height: 17px;
+    border: 2px solid #d5d8e4;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.option-card:has(input:checked) .radio-indicator {
+    border: 5px solid var(--primary);
+}
+
+/* ==========================================
+   REVISIÓN DE RESPUESTAS
+========================================== */
+
+.option-card.correct-option {
+    border: 2px solid var(--success);
+    background: #effbf6;
+}
+
+.option-card.correct-option .option-letter {
+    background: var(--success);
+    color: white;
+}
+
+.option-card.incorrect-option {
+    border: 2px solid var(--danger);
+    background: #fff2f3;
+}
+
+.option-card.incorrect-option .option-letter {
+    background: var(--danger);
+    color: white;
+}
+
+/* ==========================================
+   BOTONES Y NAVEGACIÓN
+========================================== */
+
+.exam-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: #f0f1f6;
+    color: #535a70;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #e5e7f0;
+}
+
+.btn-success {
+    background: var(--success);
+    color: white;
+}
+
+.btn-success:hover {
+    background: #179b72;
+}
+
+.answered-info {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* ==========================================
+   RESULTADOS
+========================================== */
+
+.result-panel {
+    background: white;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.result-icon {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 20px;
+    background: #e7faf3;
+    color: var(--success);
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.result-panel h2 {
+    margin: 12px 0 25px;
+}
+
+.score-circle {
+    width: 150px;
+    height: 150px;
+    border: 9px solid #e6e8ff;
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-circle strong {
+    font-size: 36px;
+    color: var(--primary);
+}
+
+.score-circle span {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.result-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 550px;
+    margin: 0 auto 25px;
+}
+
+.result-stats div {
+    padding: 20px 10px;
+    background: #f7f8fc;
+    border-radius: 10px;
+}
+
+.result-stats strong {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.result-stats span {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.result-panel>p {
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================
+   MENSAJES
+========================================== */
+
+.loading-message {
+    text-align: center;
+    padding: 35px;
+    color: var(--muted);
+}
+
+.error-message {
+    background: #fff0f0;
+    color: #bc3c4c;
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+========================================== */
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 650px) {
+
+    .header-content {
+        padding: 16px;
+    }
+
+    .header-info {
+        display: none;
+    }
+
+    .container {
+        margin: 25px auto;
+    }
+
+    .exam-selector {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .selector-control {
+        min-width: 0;
+    }
+
+    .exam-panel {
+        padding: 22px 17px;
+    }
+
+    .exam-header {
+        align-items: flex-start;
+    }
+
+    .exam-header h2 {
+        font-size: 19px;
+    }
+
+    .question-counter {
+        min-width: 80px;
+        padding: 10px;
+    }
+
+    .question-area h3 {
+        font-size: 18px;
+    }
+
+    #optionsList {
+        grid-template-columns: 1fr;
+    }
+
+    .exam-footer {
+        flex-wrap: wrap;
+    }
+
+    .answered-info {
+        order: 3;
+        width: 100%;
+        text-align: center;
+    }
+
+    .exam-footer .btn {
+        flex: 1;
+    }
+
+    .result-stats {
+        gap: 7px;
+    }
+
+    .result-stats div {
+        padding: 14px 5px;
+    }
+}
+
+[hidden] {
+    display: none !important;
+}
