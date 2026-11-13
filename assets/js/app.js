@@ -189,7 +189,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         updateProgress();
+        animateOptions();
     }
+
+    function animateOptions() {
+    const cards = document.querySelectorAll(".option-card");
+
+    cards.forEach((card, index) => {
+        card.style.animation = "none";
+
+        // Reiniciar animación
+        void card.offsetWidth;
+
+        card.style.animation = "";
+
+        card.style.animationDelay = `${index * 0.07}s`;
+    });
+}
 
     function updateProgress() {
         const total = currentExamData.preguntas.length;
