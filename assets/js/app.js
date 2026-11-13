@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showLoading(true);
         hideError();
         try {
-            const response = await fetch('./tests.json'); // Ajusta la ruta si es necesario
+            const response = await fetch('../../data/tests.json'); // Ajusta la ruta si es necesario
             if (!response.ok) throw new Error('No se pudo cargar el listado de exámenes.');
             const data = await response.json();
             
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hideError();
         try {
             // Se asume que los JSON de los test están en una carpeta ./tests/ o en la misma ruta
-            const response = await fetch(`./${fileName}`);
+            const response = await fetch(`../../data/tests/${fileName}`);
             if (!response.ok) throw new Error('No se pudo cargar el archivo del examen.');
             
             currentExamData = await response.json();
