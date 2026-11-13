@@ -337,9 +337,9 @@
       "traduccion": "¿Cuál de los siguientes NO es un tipo de selector en CSS?",
       "opciones": [
         { "id": 1, "enunciado": "Selector de color", "traduccion": "La color es una propiedad, no un selector", "correcta": true },
-        { "id": 2, "enunciado": "Selector de clase", "correcta": "Selector con punto (.)", "correcta": false },
-        { "id": 3, "enunciado": "Selector de ID", "correcta": "Selector con almohadilla (#)", "correcta": false },
-        { "id": 4, "enunciado": "Selector de etiqueta", "correcta": "Selector de tipo HTML", "correcta": false }
+        { "id": 2, "enunciado": "Selector de clase", "traduccion": "Selector con punto (.)", "correcta": false },
+        { "id": 3, "enunciado": "Selector de ID", "traduccion": "Selector con almohadilla (#)", "correcta": false },
+        { "id": 4, "enunciado": "Selector de etiqueta", "traduccion": "Selector de tipo HTML", "correcta": false }
       ]
     },
     {

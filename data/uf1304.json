@@ -99,7 +99,7 @@
         { "id": 1, "enunciado": "password", "traduccion": "Enmascara la escritura con puntos o asteriscos", "correcta": true },
         { "id": 2, "enunciado": "text", "traduccion": "Texto visible", "correcta": false },
         { "id": 3, "enunciado": "hidden", "traduccion": "Oculto sin enviar interfaz", "correcta": false },
-        { "id": 4, "enunciado": "secure", "correcta": "No existe como type estándar", "correcta": false }
+        { "id": 4, "enunciado": "secure", "traduccion": "No existe como type estándar", "correcta": false }
       ]
     },
     {
@@ -267,19 +267,19 @@
       "traduccion": "type='file'.",
       "opciones": [
         { "id": 1, "enunciado": "file", "traduccion": "Selector de archivos locales para subida", "correcta": true },
-        { "id": 2, "enunciado": "folder", "correcta": "Carpeta completa (no estándar único)", "correcta": false },
-        { "id": 3, "enunciado": "upload", "correcta": "Tipo no existente", "correcta": false },
-        { "id": 4, "enunciado": "media", "correcta": "Tipo multimedia genérico", "correcta": false }
+        { "id": 2, "enunciado": "folder", "traduccion": "Carpeta completa (no estándar único)", "correcta": false },
+        { "id": 3, "enunciado": "upload", "traduccion": "Tipo no existente", "correcta": false },
+        { "id": 4, "enunciado": "media", "traduccion": "Tipo multimedia genérico", "correcta": false }
       ]
     },
     {
       "pregunta": "Se pueden enviar los datos de un formulario de dos maneras ...",
       "traduccion": "GET y POST (con URL visible o cuerpo de petición HTTP).",
       "opciones": [
-        { "id": 1, "enunciado": "GET (datos en URL) y POST (datos en el cuerpo de la petición)", "correcta": true },
-        { "id": 2, "enunciado": "TCP y UDP", "correcta": "Protocolos de transporte de red", "correcta": false },
-        { "id": 3, "enunciado": "FTP y SFTP", "correcta": "Protocolos de transferencia de ficheros", "correcta": false },
-        { "id": 4, "enunciado": "HTML y XML", "correcta": "Lenguajes de marcado", "correcta": false }
+        { "id": 1, "enunciado": "GET (datos en URL) y POST (datos en el cuerpo de la petición)", "traduccion": "GET (datos en URL) y POST (datos en el cuerpo de la petición)", "correcta": true },
+        { "id": 2, "enunciado": "TCP y UDP", "traduccion": "Protocolos de transporte de red", "correcta": false },
+        { "id": 3, "enunciado": "FTP y SFTP", "traduccion": "Protocolos de transferencia de ficheros", "correcta": false },
+        { "id": 4, "enunciado": "HTML y XML", "traduccion": "Lenguajes de marcado", "correcta": false }
       ]
     },
     {
@@ -289,7 +289,7 @@
         { "id": 1, "enunciado": "checkbox", "traduccion": "Casilla de verificación múltiple e independiente", "correcta": true },
         { "id": 2, "enunciado": "radio", "traduccion": "Botón de opción exclusivo", "correcta": false },
         { "id": 3, "enunciado": "select", "traduccion": "Desplegable", "correcta": false },
-        { "id": 4, "enunciado": "toggle", "correcta": "Interruptor no estándar nativo puro", "correcta": false }
+        { "id": 4, "enunciado": "toggle", "traduccion": "Interruptor no estándar nativo puro", "correcta": false }
       ]
     }
   ]
