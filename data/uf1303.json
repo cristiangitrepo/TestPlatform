@@ -1,0 +1,356 @@
+{
+  "titulo": "UF1303: Deseño con CSS",
+  "descripcion": "Estilos en cascada, selectores, modelo de caixa e deseño responsivo en galego.",
+  "preguntas": [
+    {
+      "pregunta": "Cómo se enlaza unha folla de estilos ao seu documento HTML?",
+      "traduccion": "¿Cómo se enlaza una hoja de estilos a su documento HTML?",
+      "opciones": [
+        { "id": 1, "enunciado": "Usando etiqueta <link> dentro da sección <head>", "traduccion": "Etiqueta link en el head", "correcta": true },
+        { "id": 2, "enunciado": "Usando etiqueta <style> dentro de <body>", "traduccion": "Estilos en el body", "correcta": false },
+        { "id": 3, "enunciado": "Mediante atributo href global", "correcta": false },
+        { "id": 4, "enunciado": "Con la etiqueta <css>", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Onde se integra o CSS en liña nun documento HTML?",
+      "traduccion": "¿Dónde se integra el CSS en línea en un documento HTML?",
+      "opciones": [
+        { "id": 1, "enunciado": "Usando o atributo style=\"\" dentro da etiqueta HTML de apertura", "traduccion": "Atributo style en línea", "correcta": true },
+        { "id": 2, "enunciado": "En un archivo externo .css", "traduccion": "Hoja externa", "correcta": false },
+        { "id": 3, "enunciado": "Dentro de la etiqueta <script>", "correcta": false },
+        { "id": 4, "enunciado": "En la sección <head> obligatoriamente", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Qué se utiliza en CSS para crear unha regra que afecte a unha clase?",
+      "traduccion": "¿Qué se utiliza en CSS para crear una regla que afecte a una clase?",
+      "opciones": [
+        { "id": 1, "enunciado": ". (punto)", "traduccion": "Punto seguido del nombre de clase", "correcta": true },
+        { "id": 2, "enunciado": "# (almofadiña)", "traduccion": "Almohadilla para ID", "correcta": false },
+        { "id": 3, "enunciado": "@ (arroba)", "traduccion": "Arroba para reglas especiales", "correcta": false },
+        { "id": 4, "enunciado": "$ (dólar)", "traduccion": "Símbolo de variable", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que pseudoclase CSS permite seleccionar un elemento HTML que é o primeiro fillo?",
+      "traduccion": "¿Qué pseudoclase CSS permite seleccionar un elemento HTML que es el primer hijo?",
+      "opciones": [
+        { "id": 1, "enunciado": ":first-child", "traduccion": "Pseudoclase primer hijo", "correcta": true },
+        { "id": 2, "enunciado": ":hover", "traduccion": "Pseudoclase cursor encima", "correcta": false },
+        { "id": 3, "enunciado": "::before", "traduccion": "Pseudoelemento antes", "correcta": false },
+        { "id": 4, "enunciado": ":last-child", "traduccion": "Pseudoclase último hijo", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que propiedade CSS permite mover o centro dunha imaxe de fondo?",
+      "traduccion": "¿Qué propiedad CSS permite mover el centro de una imagen de fondo?",
+      "opciones": [
+        { "id": 1, "enunciado": "background-position", "traduccion": "Posición de fondo", "correcta": true },
+        { "id": 2, "enunciado": "background-size", "traduccion": "Tamaño de fondo", "correcta": false },
+        { "id": 3, "enunciado": "background-color", "traduccion": "Color de fondo", "correcta": false },
+        { "id": 4, "enunciado": "background-image", "traduccion": "Imagen de fondo", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Qué propiedade se utiliza para cambiar o grosor das letras do texto con CSS?",
+      "traduccion": "¿Qué propiedad se utiliza para cambiar el grosor de las letras del texto con CSS?",
+      "opciones": [
+        { "id": 1, "enunciado": "font-weight", "traduccion": "Grosor de fuente (negrita/normal)", "correcta": true },
+        { "id": 2, "enunciado": "font-size", "traduccion": "Tamaño de fuente", "correcta": false },
+        { "id": 3, "enunciado": "font-style", "traduccion": "Estilo de fuente (cursiva)", "correcta": false },
+        { "id": 4, "enunciado": "font-family", "traduccion": "Familia tipográfica", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que pseudoclase CSS permite aplicar estilos cando o cursor do rato pasa por enriba?",
+      "traduccion": "¿Qué pseudoclase CSS permite aplicar estilos cuando el cursor del ratón pasa por encima?",
+      "opciones": [
+        { "id": 1, "enunciado": ":hover", "traduccion": "Pseudoclase hover", "correcta": true },
+        { "id": 2, "enunciado": ":focus", "traduccion": "Pseudoclase foco", "correcta": false },
+        { "id": 3, "enunciado": ":active", "traduccion": "Pseudoclase activo", "correcta": false },
+        { "id": 4, "enunciado": ":visited", "traduccion": "Pseudoclase visitado", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Qué se utiliza en CSS para crear unha regra que afecte a un atributo de ID?",
+      "traduccion": "¿Qué se utiliza en CSS para crear una regla que afecte a un atributo ID?",
+      "opciones": [
+        { "id": 1, "enunciado": "# (almofadiña)", "traduccion": "Almohadilla seguida del ID", "correcta": true },
+        { "id": 2, "enunciado": ". (punto)", "traduccion": "Punto para clases", "correcta": false },
+        { "id": 3, "enunciado": "@ (arroba)", "traduccion": "Arroba para consultas de medios", "correcta": false },
+        { "id": 4, "enunciado": "* (asterisco)", "traduccion": "Selector universal", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que propiedade CSS define o ancho de un elemento HTML?",
+      "traduccion": "¿Qué propiedad CSS define el ancho de un elemento HTML?",
+      "opciones": [
+        { "id": 1, "enunciado": "width", "traduccion": "Ancho del elemento", "correcta": true },
+        { "id": 2, "enunciado": "height", "traduccion": "Alto del elemento", "correcta": false },
+        { "id": 3, "enunciado": "margin", "traduccion": "Margen exterior", "correcta": false },
+        { "id": 4, "enunciado": "padding", "traduccion": "Relleno interior", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Cal dos seguintes NON é un formato de color coma valor dunha regra CSS?",
+      "traduccion": "¿Cuál de los siguientes NO es un formato de color como valor de una regla CSS?",
+      "opciones": [
+        { "id": 1, "enunciado": "RAL 9005", "traduccion": "Sistema de identificación de pinturas físicas", "correcta": true },
+        { "id": 2, "enunciado": "HEX", "traduccion": "Formato hexadecimal (#ff0000)", "correcta": false },
+        { "id": 3, "enunciado": "RGB", "traduccion": "Modelo rojo verde azul", "correcta": false },
+        { "id": 4, "enunciado": "HSL", "traduccion": "Modelo tono saturación luminosidad", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Qué caracter ou símbolo se utiliza para comezar una regra de medida query en CSS?",
+      "traduccion": "¿Qué carácter o símbolo se utiliza para comenzar una regla media query en CSS?",
+      "opciones": [
+        { "id": 1, "enunciado": "@ (arroba)", "traduccion": "Símbolo arroba (@media)", "correcta": true },
+        { "id": 2, "enunciado": "# (almohadilla)", "traduccion": "Almohadilla", "correcta": false },
+        { "id": 3, "enunciado": ". (punto)", "traduccion": "Punto", "correcta": false },
+        { "id": 4, "enunciado": "$ (dólar)", "traduccion": "Dólar", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Qué propiedade CSS se utiliza para cambiar o color de fondo dun elemento?",
+      "traduccion": "¿Qué propiedad CSS se utiliza para cambiar el color de fondo de un elemento?",
+      "opciones": [
+        { "id": 1, "enunciado": "background-color", "traduccion": "Color de fondo", "correcta": true },
+        { "id": 2, "enunciado": "color", "traduccion": "Color de texto", "correcta": false },
+        { "id": 3, "enunciado": "border-color", "traduccion": "Color de borde", "correcta": false },
+        { "id": 4, "enunciado": "outline-color", "traduccion": "Color de contorno", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que opción relaciona correctamente as unidades de medida CSS cos seus tipos?",
+      "traduccion": "¿Qué opción relaciona correctamente las unidades de medida CSS con sus tipos?",
+      "opciones": [
+        { "id": 1, "enunciado": "px é absoluta; em, %, vh ou vw son relativas", "traduccion": "Píxeles absolutos y relativas em/vw/vh", "correcta": true },
+        { "id": 2, "enunciado": "rem é absoluta; px é relativa", "traduccion": "Relación invertida", "correcta": false },
+        { "id": 3, "enunciado": "Todas son absolutas", "traduccion": "Sin unidades relativas", "correcta": false },
+        { "id": 4, "enunciado": "Todas son relativas al viewport", "traduccion": "Sin unidades físicas", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Para que serven as media queries en CSS?",
+      "traduccion": "¿Para qué sirven las media queries en CSS?",
+      "opciones": [
+        { "id": 1, "enunciado": "Adaptar os estilos á pantalla ou dispositivo", "traduccion": "Diseño adaptable / responsive", "correcta": true },
+        { "id": 2, "enunciado": "Validar formularios del lado cliente", "correcta": false },
+        { "id": 3, "enunciado": "Conectar con bases de datos SQL", "correcta": false },
+        { "id": 4, "enunciado": "Comprimir archivos de vídeo", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que parte do modelo de caixa contén o texto ou a imaxe?",
+      "traduccion": "¿Qué parte del modelo de caja contiene el texto o la imagen?",
+      "opciones": [
+        { "id": 1, "enunciado": "content", "traduccion": "Área de contenido", "correcta": true },
+        { "id": 2, "enunciado": "padding", "traduccion": "Relleno interior", "correcta": false },
+        { "id": 3, "enunciado": "border", "traduccion": "Borde", "correcta": false },
+        { "id": 4, "enunciado": "margin", "traduccion": "Margen exterior", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Onde se integra o estilo cando está incrustado?",
+      "traduccion": "¿Dónde se integra el estilo cuando está incrustado?",
+      "opciones": [
+        { "id": 1, "enunciado": "Usando a etiqueta <style> dentro da sección <head>", "traduccion": "Etiqueta style en el head", "correcta": true },
+        { "id": 2, "enunciado": "Mediante atributo style en cada etiqueta", "correcta": false },
+        { "id": 3, "enunciado": "En un archivo externo enlazado", "correcta": false },
+        { "id": 4, "enunciado": "Al final del elemento <body>", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Qué propiedade se utiliza para cambiar o tamaño das letras do texto con CSS?",
+      "traduccion": "¿Qué propiedad se utiliza para cambiar el tamaño de las letras del texto con CSS?",
+      "opciones": [
+        { "id": 1, "enunciado": "font-size", "traduccion": "Tamaño de fuente", "correcta": true },
+        { "id": 2, "enunciado": "font-weight", "traduccion": "Grosor", "correcta": false },
+        { "id": 3, "enunciado": "font-family", "traduccion": "Tipografía", "correcta": false },
+        { "id": 4, "enunciado": "line-height", "traduccion": "Altura de línea", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Qué propiedade se utiliza para cambiar o estilo do texto con CSS?",
+      "traduccion": "¿Qué propiedad se utiliza para cambiar el estilo del texto con CSS?",
+      "opciones": [
+        { "id": 1, "enunciado": "font-style", "traduccion": "Estilo de fuente (cursiva/normal)", "correcta": true },
+        { "id": 2, "enunciado": "text-align", "traduccion": "Alineación", "correcta": false },
+        { "id": 3, "enunciado": "text-decoration", "traduccion": "Decoración de texto", "correcta": false },
+        { "id": 4, "enunciado": "font-variant", "traduccion": "Versalitas", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que propiedade CSS define se un elemento HTML se mostra en bloque, en liña, flexible...",
+      "traduccion": "¿Qué propiedad CSS define si un elemento HTML se muestra en bloque, en línea, flexible...",
+      "opciones": [
+        { "id": 1, "enunciado": "display", "traduccion": "Comportamiento de visualización del elemento", "correcta": true },
+        { "id": 2, "enunciado": "visibility", "traduccion": "Visibilidad", "correcta": false },
+        { "id": 3, "enunciado": "position", "traduccion": "Posicionamiento", "correcta": false },
+        { "id": 4, "enunciado": "float", "traduccion": "Flotación", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que propiedade CSS permite controlar o tamaño dunha imaxe de fondo?",
+      "traduccion": "¿Qué propiedad CSS permite controlar el tamaño de una imagen de fondo?",
+      "opciones": [
+        { "id": 1, "enunciado": "background-size", "traduccion": "Tamaño de fondo (cover, contain, etc.)", "correcta": true },
+        { "id": 2, "enunciado": "background-position", "traduccion": "Posición", "correcta": false },
+        { "id": 3, "enunciado": "background-repeat", "traduccion": "Repetición", "correcta": false },
+        { "id": 4, "enunciado": "object-fit", "traduccion": "Ajuste de objeto de imagen", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que propiedade CSS pinta o borde dun elemento HTML?",
+      "traduccion": "¿Qué propiedad CSS pinta el borde de un elemento HTML?",
+      "opciones": [
+        { "id": 1, "enunciado": "border", "traduccion": "Borde del elemento", "correcta": true },
+        { "id": 2, "enunciado": "outline", "traduccion": "Contorno", "correcta": false },
+        { "id": 3, "enunciado": "box-shadow", "traduccion": "Sombra de caja", "correcta": false },
+        { "id": 4, "enunciado": "ring", "traduccion": "Anillo", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Qué se utiliza en CSS para crear unha regra que afecte a un elemento HTML?",
+      "traduccion": "¿Qué se utiliza en CSS para crear una regla que afecte a un elemento HTML?",
+      "opciones": [
+        { "id": 1, "enunciado": "O nome da etiqueta HTML (selector de tipo/etiqueta)", "correcta": true },
+        { "id": 2, "enunciado": "Un punto seguido de clase", "correcta": false },
+        { "id": 3, "enunciado": "Una almohadilla de identificador", "correcta": false },
+        { "id": 4, "enunciado": "Un corchete de atributo", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que propiedade CSS permite establecer unha imaxe como fondo dun elemento?",
+      "traduccion": "¿Qué propiedad CSS permite establecer una imagen como fondo de un elemento?",
+      "opciones": [
+        { "id": 1, "enunciado": "background-image", "traduccion": "Imagen de fondo", "correcta": true },
+        { "id": 2, "enunciado": "src", "correcta": false },
+        { "id": 3, "enunciado": "img-src", "correcta": false },
+        { "id": 4, "enunciado": "source-image", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que pseudoelemento CSS permite inserir contido antes dun elemento?",
+      "traduccion": "¿Qué pseudoelemento CSS permite insertar contenido antes de un elemento?",
+      "opciones": [
+        { "id": 1, "enunciado": "::before", "traduccion": "Pseudoelemento before", "correcta": true },
+        { "id": 2, "enunciado": "::after", "traduccion": "Pseudoelemento after", "correcta": false },
+        { "id": 3, "enunciado": ":first-child", "traduccion": "Pseudoclase primer hijo", "correcta": false },
+        { "id": 4, "enunciado": ":hover", "traduccion": "Pseudoclase hover", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Cal das seguintes opcións é unha pseudoclase?",
+      "traduccion": "¿Cuál de las siguientes opciones es una pseudoclase?",
+      "opciones": [
+        { "id": 1, "enunciado": ":hover", "traduccion": "Pseudoclase de estado", "correcta": true },
+        { "id": 2, "enunciado": "::before", "traduccion": "Pseudoelemento", "correcta": false },
+        { "id": 3, "enunciado": "::after", "traduccion": "Pseudoelemento", "correcta": false },
+        { "id": 4, "enunciado": "::marker", "traduccion": "Pseudoelemento de lista", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Cal das seguintes opcións é un pseudoelemento?",
+      "traduccion": "¿Cuál de las siguientes opciones es un pseudoelemento?",
+      "opciones": [
+        { "id": 1, "enunciado": "::before", "traduccion": "Pseudoelemento de inserción", "correcta": true },
+        { "id": 2, "enunciado": ":hover", "traduccion": "Pseudoclase", "correcta": false },
+        { "id": 3, "enunciado": ":focus", "traduccion": "Pseudoclase", "correcta": false },
+        { "id": 4, "enunciado": ":first-child", "traduccion": "Pseudoclase", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que propiedade define o espazo entre o contido e o borde dun elemento?",
+      "traduccion": "¿Qué propiedad define el espacio entre el contenido y el borde de un elemento?",
+      "opciones": [
+        { "id": 1, "enunciado": "padding", "traduccion": "Relleno interior", "correcta": true },
+        { "id": 2, "enunciado": "margin", "traduccion": "Margen exterior", "correcta": false },
+        { "id": 3, "enunciado": "border", "traduccion": "Borde", "correcta": false },
+        { "id": 4, "enunciado": "spacing", "traduccion": "Espaciado general", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que valor dunha regra de CSS permite definir unha cor mediante vermello, verde e azul?",
+      "traduccion": "¿Qué valor de regla CSS permite definir color mediante rojo, verde y azul?",
+      "opciones": [
+        { "id": 1, "enunciado": "rgb", "traduccion": "Modelo RGB", "correcta": true },
+        { "id": 2, "enunciado": "cmyk", "traduccion": "Modelo de impresión", "correcta": false },
+        { "id": 3, "enunciado": "vector", "traduccion": "Gráfico vectorial", "correcta": false },
+        { "id": 4, "enunciado": "px", "traduccion": "Unidad de medida", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que propiedade define o espazo exterior ao bordo dun elemento?",
+      "traduccion": "¿Qué propiedad define el espacio exterior al borde de un elemento?",
+      "opciones": [
+        { "id": 1, "enunciado": "margin", "traduccion": "Margen exterior", "correcta": true },
+        { "id": 2, "enunciado": "padding", "traduccion": "Relleno interior", "correcta": false },
+        { "id": 3, "enunciado": "border-width", "traduccion": "Grosor de borde", "correcta": false },
+        { "id": 4, "enunciado": "gap", "traduccion": "Brecha de rejilla", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que propiedade CSS pode situar un elemento abaixo e a dereita?",
+      "traduccion": "¿Qué propiedad CSS puede situar un elemento abajo y a la derecha?",
+      "opciones": [
+        { "id": 1, "enunciado": "position", "traduccion": "Posicionamiento CSS", "correcta": true },
+        { "id": 2, "enunciado": "float", "traduccion": "Flotación básica", "correcta": false },
+        { "id": 3, "enunciado": "align-items", "traduccion": "Alineación Flexbox", "correcta": false },
+        { "id": 4, "enunciado": "text-align", "traduccion": "Alineación de texto", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Qué propiedade se utiliza para cambiar a tipografía ou tipo de letra?",
+      "traduccion": "¿Qué propiedad se utiliza para cambiar la tipografía o tipo de letra?",
+      "opciones": [
+        { "id": 1, "enunciado": "font-family", "traduccion": "Familia de fuentes", "correcta": true },
+        { "id": 2, "enunciado": "font-size", "traduccion": "Tamaño", "correcta": false },
+        { "id": 3, "enunciado": "font-weight", "traduccion": "Grosor", "correcta": false },
+        { "id": 4, "enunciado": "text-style", "traduccion": "Estilo de texto", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que pseudoelemento CSS permite inserir contido despois dun elemento?",
+      "traduccion": "¿Qué pseudoelemento CSS permite insertar contenido después de un elemento?",
+      "opciones": [
+        { "id": 1, "enunciado": "::after", "traduccion": "Pseudoelemento after", "correcta": true },
+        { "id": 2, "enunciado": "::before", "traduccion": "Pseudoelemento before", "correcta": false },
+        { "id": 3, "enunciado": ":last-child", "traduccion": "Pseudoclase último hijo", "correcta": false },
+        { "id": 4, "enunciado": ":hover", "traduccion": "Pseudoclase", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Qué propiedade CSS se utiliza para cambiar o color do texto?",
+      "traduccion": "¿Qué propiedad CSS se utiliza para cambiar el color del texto?",
+      "opciones": [
+        { "id": 1, "enunciado": "color", "traduccion": "Color de texto", "correcta": true },
+        { "id": 2, "enunciado": "background-color", "traduccion": "Color de fondo", "correcta": false },
+        { "id": 3, "enunciado": "text-color", "traduccion": "Propiedad no estándar", "correcta": false },
+        { "id": 4, "enunciado": "font-color", "traduccion": "Propiedad no estándar", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Cal dos seguintes NON é un tipo de selector en CSS?",
+      "traduccion": "¿Cuál de los siguientes NO es un tipo de selector en CSS?",
+      "opciones": [
+        { "id": 1, "enunciado": "Selector de color", "traduccion": "La color es una propiedad, no un selector", "correcta": true },
+        { "id": 2, "enunciado": "Selector de clase", "correcta": "Selector con punto (.)", "correcta": false },
+        { "id": 3, "enunciado": "Selector de ID", "correcta": "Selector con almohadilla (#)", "correcta": false },
+        { "id": 4, "enunciado": "Selector de etiqueta", "correcta": "Selector de tipo HTML", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Que propiedade CSS define o alto de un elemento HTML?",
+      "traduccion": "¿Qué propiedad CSS define el alto de un elemento HTML?",
+      "opciones": [
+        { "id": 1, "enunciado": "height", "traduccion": "Altura del elemento", "correcta": true },
+        { "id": 2, "enunciado": "width", "traduccion": "Ancho", "correcta": false },
+        { "id": 3, "enunciado": "min-width", "traduccion": "Ancho mínimo", "correcta": false },
+        { "id": 4, "enunciado": "max-height", "traduccion": "Altura máxima", "correcta": false }
+      ]
+    }
+  ]
+}

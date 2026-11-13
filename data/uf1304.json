@@ -1,0 +1,296 @@
+{
+  "titulo": "UF1304: Xestión de formularios e contidos (WordPress e Plantillas)",
+  "descripcion": "Formularios HTML5, validación, plantillas web semánticas y CMS WordPress.",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué se envía en un campo de formulario de tipo <textarea name=\"message\" ...>?",
+      "traduccion": "Una o varias líneas de texto introducidas por el usuario.",
+      "opciones": [
+        { "id": 1, "enunciado": "Una o varias líneas de texto", "traduccion": "Área de texto multilínea", "correcta": true },
+        { "id": 2, "enunciado": "Una única línea estricta", "traduccion": "Input text simple", "correcta": false },
+        { "id": 3, "enunciado": "Un archivo binario adjunto", "traduccion": "Input file", "correcta": false },
+        { "id": 4, "enunciado": "Un número entero con spinners", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "La etiqueta <input type=”submit”> se usa para ...",
+      "traduccion": "Ejecutar la acción (action) del formulario.",
+      "opciones": [
+        { "id": 1, "enunciado": "Ejecutar el action del formulario enviando los datos", "traduccion": "Botón de envío", "correcta": true },
+        { "id": 2, "enunciado": "Limpiar todos los campos introducidos", "traduccion": "Botón reset", "correcta": false },
+        { "id": 3, "enunciado": "Ocultar variables de sesión", "traduccion": "Campo hidden", "correcta": false },
+        { "id": 4, "enunciado": "Adjuntar archivos multimedia", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué type de input permite introducir solo una hora (horas y minutos), sin fecha?",
+      "traduccion": "type='time'.",
+      "opciones": [
+        { "id": 1, "enunciado": "time", "traduccion": "Selector de hora formato HH:MM", "correcta": true },
+        { "id": 2, "enunciado": "date", "traduccion": "Selector de fecha completa", "correcta": false },
+        { "id": 3, "enunciado": "datetime-local", "traduccion": "Fecha y hora local", "correcta": false },
+        { "id": 4, "enunciado": "week", "traduccion": "Selector de semana", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué type de input crea un campo que solo acepta números con flechas de incremento?",
+      "traduccion": "type='number'.",
+      "opciones": [
+        { "id": 1, "enunciado": "number", "traduccion": "Caja numérica con flechas y atributos min/max", "correcta": true },
+        { "id": 2, "enunciado": "range", "traduccion": "Deslizador de rango", "correcta": false },
+        { "id": 3, "enunciado": "tel", "traduccion": "Teléfono", "correcta": false },
+        { "id": 4, "enunciado": "text", "traduccion": "Texto plano genérico", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Por validación entendemos ...",
+      "traduccion": "Comprobar que los datos introducidos sean coherentes con lo esperado.",
+      "opciones": [
+        { "id": 1, "enunciado": "Comprobar que los datos introducidos cumplan con los requisitos esperados", "correcta": true },
+        { "id": 2, "enunciado": "Cifrar la contraseña con algoritmo MD5 en cliente", "correcta": false },
+        { "id": 3, "enunciado": "Comprimir la petición HTTP mediante GZIP", "correcta": false },
+        { "id": 4, "enunciado": "Establecer estilos CSS condicionales", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué type de input muestra un selector de color y devuelve valor hexadecimal?",
+      "traduccion": "type='color'.",
+      "opciones": [
+        { "id": 1, "enunciado": "color", "traduccion": "Selector de paleta hexadecimal #rrggbb", "correcta": true },
+        { "id": 2, "enunciado": "range", "traduccion": "Deslizador", "correcta": false },
+        { "id": 3, "enunciado": "text", "traduccion": "Texto", "correcta": false },
+        { "id": 4, "enunciado": "hidden", "traduccion": "Oculto", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Una plantilla es ...",
+      "traduccion": "Una estructura predefinida que combina archivos HTML y CSS como base.",
+      "opciones": [
+        { "id": 1, "enunciado": "Una estructura predefinida que sirve como base con HTML y CSS", "correcta": true },
+        { "id": 2, "enunciado": "Una base de datos relacional SQL completa", "correcta": false },
+        { "id": 3, "enunciado": "Un plugin de seguridad para WordPress", "correcta": false },
+        { "id": 4, "enunciado": "Un script de validación de formularios en servidor", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué grupo de etiquetas se utilizan habitualmente para la estructura semántica de una plantilla?",
+      "traduccion": "header, nav, main, section, article, aside, footer.",
+      "opciones": [
+        { "id": 1, "enunciado": "<header>, <nav>, <main>, <section>, <article>, <aside> y <footer>", "correcta": true },
+        { "id": 2, "enunciado": "<table>, <tr>, <td>, <th>", "correcta": false },
+        { "id": 3, "enunciado": "<form>, <input>, <select>, <textarea>", "correcta": false },
+        { "id": 4, "enunciado": "<audio>, <video>, <source>, <track>", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Para qué sirve el atributo pattern de un <input>?",
+      "traduccion": "Para indicar una expresión regular con la que debe coincidir el valor.",
+      "opciones": [
+        { "id": 1, "enunciado": "Para indicar una expresión regular de validación de formato", "correcta": true },
+        { "id": 2, "enunciado": "Para establecer una imagen de fondo en el input", "correcta": false },
+        { "id": 3, "enunciado": "Para asignar un nombre identificador al servidor", "correcta": false },
+        { "id": 4, "enunciado": "Para definir el número máximo de caracteres", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de input se utiliza para introducir una contraseña ocultando caracteres?",
+      "traduccion": "type='password'.",
+      "opciones": [
+        { "id": 1, "enunciado": "password", "traduccion": "Enmascara la escritura con puntos o asteriscos", "correcta": true },
+        { "id": 2, "enunciado": "text", "traduccion": "Texto visible", "correcta": false },
+        { "id": 3, "enunciado": "hidden", "traduccion": "Oculto sin enviar interfaz", "correcta": false },
+        { "id": 4, "enunciado": "secure", "correcta": "No existe como type estándar", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué type de input está pensado para números de teléfono con teclado específico en móvil?",
+      "traduccion": "type='tel'.",
+      "opciones": [
+        { "id": 1, "enunciado": "tel", "traduccion": "Abre teclado numérico telefónico", "correcta": true },
+        { "id": 2, "enunciado": "number", "traduccion": "Numérico con flechas", "correcta": false },
+        { "id": 3, "enunciado": "text", "traduccion": "Texto genérico", "correcta": false },
+        { "id": 4, "enunciado": "search", "traduccion": "Búsqueda", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué tipo de input muestra un control deslizante para un rango de valores?",
+      "traduccion": "type='range'.",
+      "opciones": [
+        { "id": 1, "enunciado": "range", "traduccion": "Control deslizante (slider)", "correcta": true },
+        { "id": 2, "enunciado": "number", "traduccion": "Caja numérica", "correcta": false },
+        { "id": 3, "enunciado": "progress", "traduccion": "Barra de progreso estática", "correcta": false },
+        { "id": 4, "enunciado": "meter", "traduccion": "Medidor", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué type de input valida que el dato sea una URL válida con esquema http://?",
+      "traduccion": "type='url'.",
+      "opciones": [
+        { "id": 1, "enunciado": "url", "traduccion": "Valida direcciones web absolutas", "correcta": true },
+        { "id": 2, "enunciado": "text", "traduccion": "Texto plano", "correcta": false },
+        { "id": 3, "enunciado": "email", "traduccion": "Correo electrónico", "correcta": false },
+        { "id": 4, "enunciado": "file", "traduccion": "Archivo", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se envía en un campo de formulario de tipo <select name=\"provincia\" ...>?",
+      "traduccion": "Una sola opción de un desplegable.",
+      "opciones": [
+        { "id": 1, "enunciado": "El valor (value) de la opción seleccionada", "correcta": true },
+        { "id": 2, "enunciado": "Todas las opciones del listado desplegable a la vez", "correcta": false },
+        { "id": 3, "enunciado": "Un archivo adjunto comprimido", "correcta": false },
+        { "id": 4, "enunciado": "Una cadena de texto multilínea", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué type de input permite elegir día, mes y año mediante calendario?",
+      "traduccion": "type='date'.",
+      "opciones": [
+        { "id": 1, "enunciado": "date", "traduccion": "Selector de calendario AAAA-MM-DD", "correcta": true },
+        { "id": 2, "enunciado": "time", "traduccion": "Hora", "correcta": false },
+        { "id": 3, "enunciado": "datetime", "traduccion": "Fecha hora global", "correcta": false },
+        { "id": 4, "enunciado": "month", "traduccion": "Mes", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué type de input está pensado para campos de búsqueda?",
+      "traduccion": "type='search'.",
+      "opciones": [
+        { "id": 1, "enunciado": "search", "traduccion": "Campo semántico de búsqueda con botón limpiar", "correcta": true },
+        { "id": 2, "enunciado": "text", "traduccion": "Texto normal", "correcta": false },
+        { "id": 3, "enunciado": "url", "traduccion": "URL", "correcta": false },
+        { "id": 4, "enunciado": "email", "traduccion": "Correo", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué se envía en un campo de tipo <input type=\"text\" name=\"nombre\" ...>?",
+      "traduccion": "Una sola línea de texto.",
+      "opciones": [
+        { "id": 1, "enunciado": "Una sola línea de texto introducida por el usuario", "correcta": true },
+        { "id": 2, "enunciado": "Párrafos múltiples de texto", "correcta": false },
+        { "id": 3, "enunciado": "Una imagen en formato base64", "correcta": false },
+        { "id": 4, "enunciado": "Un booleano verdadero/falso", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué type de input permite elegir única opción en grupo (al marcar una se desmarca otra)?",
+      "traduccion": "type='radio'.",
+      "opciones": [
+        { "id": 1, "enunciado": "radio", "traduccion": "Botones de opción mutuamente excluyentes", "correcta": true },
+        { "id": 2, "enunciado": "checkbox", "traduccion": "Casillas independientes múltiples", "correcta": false },
+        { "id": 3, "enunciado": "select", "traduccion": "Menú desplegable", "correcta": false },
+        { "id": 4, "enunciado": "range", "traduccion": "Rango", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué type de input crea un campo oculto cuyo valor se envía con el formulario?",
+      "traduccion": "type='hidden'.",
+      "opciones": [
+        { "id": 1, "enunciado": "hidden", "traduccion": "Campo no visible ni editable por el usuario", "correcta": true },
+        { "id": 2, "enunciado": "password", "traduccion": "Contraseña enmascarada", "correcta": false },
+        { "id": 3, "enunciado": "disabled", "traduccion": "Atributo de desactivación", "correcta": false },
+        { "id": 4, "enunciado": "readonly", "traduccion": "Solo lectura", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la máxima premisa al implementar un formulario web?",
+      "traduccion": "Asumir que el usuario final puede equivocarse y no tener conocimientos técnicos.",
+      "opciones": [
+        { "id": 1, "enunciado": "Asumir que el usuario final no tiene conocimientos informáticos y puede equivocarse", "correcta": true },
+        { "id": 2, "enunciado": "Exigir scripts complejos de consola al usuario", "correcta": false },
+        { "id": 3, "enunciado": "Bloquear cualquier validación en el lado del cliente", "correcta": false },
+        { "id": 4, "enunciado": "Ocultar los mensajes de error obligatorios", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Con el atributo method del formulario ...",
+      "traduccion": "Se indica el método GET o POST para enviar los datos.",
+      "opciones": [
+        { "id": 1, "enunciado": "Se indica el método GET o POST de envío HTTP", "correcta": true },
+        { "id": 2, "enunciado": "Se define la encriptación SSL del servidor", "correcta": false },
+        { "id": 3, "enunciado": "Se especifica la función JavaScript de validación", "correcta": false },
+        { "id": 4, "enunciado": "Se establece la ruta absoluta de la base de datos", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué input type está diseñado para validar correo electrónico con @?",
+      "traduccion": "type='email'.",
+      "opciones": [
+        { "id": 1, "enunciado": "email", "traduccion": "Valida formato básico de correo electrónico", "correcta": true },
+        { "id": 2, "enunciado": "text", "traduccion": "Texto plano", "correcta": false },
+        { "id": 3, "enunciado": "url", "traduccion": "URL web", "correcta": false },
+        { "id": 4, "enunciado": "tel", "traduccion": "Teléfono", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "En una plantilla web, ¿qué elementos se consideran partes fijas (no modificables)?",
+      "traduccion": "Los elementos básicos de HTML5 semántico comunes (cabecera, menú, pie).",
+      "opciones": [
+        { "id": 1, "enunciado": "Cabecera, logotipo, menú, pie y hoja de estilos común", "correcta": true },
+        { "id": 2, "enunciado": "Los artículos y entradas de blog específicos de cada página", "correcta": false },
+        { "id": 3, "enunciado": "Las galerías de imágenes de cada sección", "correcta": false },
+        { "id": 4, "enunciado": "Los comentarios de los usuarios en los posts", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Wordpress se enfocó en sus inicios en la creación de ...",
+      "traduccion": "Blogs (sitios web de información periódicamente actualizada).",
+      "opciones": [
+        { "id": 1, "enunciado": "Blogs y publicaciones periódicas de noticias", "correcta": true },
+        { "id": 2, "enunciado": "Tiendas virtuales de comercio electrónico masivo", "correcta": false },
+        { "id": 3, "enunciado": "Redes sociales corporativas cerradas", "correcta": false },
+        { "id": 4, "enunciado": "Sistemas operativos de escritorio en la nube", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Antes de descargar una plantilla web de internet y adaptarla, ¿qué conviene comprobar?",
+      "traduccion": "Licencia, que sea semántica, responsive, accesible y usable.",
+      "opciones": [
+        { "id": 1, "enunciado": "Que la licencia permita su uso, sea semántica, responsive, accesible y usable", "correcta": true },
+        { "id": 2, "enunciado": "Únicamente que pese menos de un megabyte", "correcta": false },
+        { "id": 3, "enunciado": "Que incluya virus informáticos de prueba", "correcta": false },
+        { "id": 4, "enunciado": "Que no tenga código CSS asociado", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué es WordPress?",
+      "traduccion": "Un sistema de gestión de contenidos (CMS) para crear y administrar sitios web.",
+      "opciones": [
+        { "id": 1, "enunciado": "Un CMS (Content Management System) para crear y administrar webs", "correcta": true },
+        { "id": 2, "enunciado": "Un lenguaje de marcado hipertexto alternativo", "correcta": false },
+        { "id": 3, "enunciado": "Un framework de JavaScript para front-end", "correcta": false },
+        { "id": 4, "enunciado": "Un compilador de código binario C#", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué type de input permite seleccionar uno o varios archivos del dispositivo?",
+      "traduccion": "type='file'.",
+      "opciones": [
+        { "id": 1, "enunciado": "file", "traduccion": "Selector de archivos locales para subida", "correcta": true },
+        { "id": 2, "enunciado": "folder", "correcta": "Carpeta completa (no estándar único)", "correcta": false },
+        { "id": 3, "enunciado": "upload", "correcta": "Tipo no existente", "correcta": false },
+        { "id": 4, "enunciado": "media", "correcta": "Tipo multimedia genérico", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "Se pueden enviar los datos de un formulario de dos maneras ...",
+      "traduccion": "GET y POST (con URL visible o cuerpo de petición HTTP).",
+      "opciones": [
+        { "id": 1, "enunciado": "GET (datos en URL) y POST (datos en el cuerpo de la petición)", "correcta": true },
+        { "id": 2, "enunciado": "TCP y UDP", "correcta": "Protocolos de transporte de red", "correcta": false },
+        { "id": 3, "enunciado": "FTP y SFTP", "correcta": "Protocolos de transferencia de ficheros", "correcta": false },
+        { "id": 4, "enunciado": "HTML y XML", "correcta": "Lenguajes de marcado", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué type de input se usa para que el usuario pueda marcar varias opciones de forma independiente?",
+      "traduccion": "type='checkbox'.",
+      "opciones": [
+        { "id": 1, "enunciado": "checkbox", "traduccion": "Casilla de verificación múltiple e independiente", "correcta": true },
+        { "id": 2, "enunciado": "radio", "traduccion": "Botón de opción exclusivo", "correcta": false },
+        { "id": 3, "enunciado": "select", "traduccion": "Desplegable", "correcta": false },
+        { "id": 4, "enunciado": "toggle", "correcta": "Interruptor no estándar nativo puro", "correcta": false }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,21 @@
       "id": "fundamentos-html",
       "nombre": "Fundamentos de HTML5",
       "archivo": "fundamentos-html.json"
+    },
+    {
+      "id": "uf1302",
+      "nombre": "UF1302: Elaboración de páginas web con HTML",
+      "archivo": "uf1302.json"
+    },
+    {
+      "id": "uf1303",
+      "nombre": "UF1303: Deseño con CSS",
+      "archivo": "uf1303.json"
+    },
+    {
+      "id": "uf1304",
+      "nombre": "UF1304: Xestión de formularios e contidos (WordPress e Plantillas)",
+      "archivo": "uf1304.json"
     }
   ]
 }

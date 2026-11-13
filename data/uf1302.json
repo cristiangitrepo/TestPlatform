@@ -1,0 +1,206 @@
+{
+  "titulo": "UF1302 - Creación de páginas web con HTML",
+  "descripcion": "Conceptos básicos de HTML, estructura de documentos web, imágenes, accesibilidad, usabilidad y herramientas de edición.",
+  "preguntas": [
+    {
+      "pregunta": "¿Qué es el elemento <html></html>?",
+      "traduccion": "¿Qué es el elemento raíz de un documento HTML?",
+      "opciones": [
+        {"id": 1, "enunciado": "Es el elemento contenedor de todos los datos de la página web.", "traduccion": "Elemento raíz que contiene todo el documento.", "correcta": true},
+        {"id": 2, "enunciado": "Contiene únicamente los textos visibles.", "traduccion": "Contenedor exclusivo del texto visible.", "correcta": false},
+        {"id": 3, "enunciado": "Define los estilos visuales de la página.", "traduccion": "Elemento para definir los estilos.", "correcta": false},
+        {"id": 4, "enunciado": "Permite insertar imágenes.", "traduccion": "Elemento para insertar imágenes.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el elemento <body></body>?",
+      "traduccion": "¿Qué contiene el elemento body?",
+      "opciones": [
+        {"id": 1, "enunciado": "Información técnica para los buscadores.", "traduccion": "Metadatos e información técnica.", "correcta": false},
+        {"id": 2, "enunciado": "Los elementos con contenido visible para los usuarios.", "traduccion": "Contenido que se muestra en la página web.", "correcta": true},
+        {"id": 3, "enunciado": "La declaración del tipo de documento.", "traduccion": "Declaración del documento HTML.", "correcta": false},
+        {"id": 4, "enunciado": "Las hojas de estilos externas.", "traduccion": "Archivos CSS externos.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Qué es el elemento <head></head>?",
+      "traduccion": "¿Qué contiene el elemento head?",
+      "opciones": [
+        {"id": 1, "enunciado": "Los elementos visibles de la página.", "traduccion": "Contenido visible para los usuarios.", "correcta": false},
+        {"id": 2, "enunciado": "Los elementos de navegación.", "traduccion": "Menús y enlaces de navegación.", "correcta": false},
+        {"id": 3, "enunciado": "Información técnica y metadatos del documento.", "traduccion": "Información destinada al navegador y otros agentes.", "correcta": true},
+        {"id": 4, "enunciado": "Únicamente las imágenes del documento.", "traduccion": "Imágenes de la página web.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "Algunas funciones de un editor de texto son...",
+      "traduccion": "¿Qué función puede ofrecer un editor de texto moderno?",
+      "opciones": [
+        {"id": 1, "enunciado": "Colorear el texto según el lenguaje de marcado para mejorar la legibilidad.", "traduccion": "Resaltado de sintaxis según el lenguaje utilizado.", "correcta": true},
+        {"id": 2, "enunciado": "Crear automáticamente fotografías digitales.", "traduccion": "Creación de imágenes fotográficas.", "correcta": false},
+        {"id": 3, "enunciado": "Imprimir documentos sin necesidad de impresora.", "traduccion": "Impresión sin dispositivo de impresión.", "correcta": false},
+        {"id": 4, "enunciado": "Convertir cualquier texto en una página web publicada.", "traduccion": "Publicación automática de páginas web.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Qué es W3C?",
+      "traduccion": "¿Qué significa W3C?",
+      "opciones": [
+        {"id": 1, "enunciado": "World Wide Web Consortium, organización que desarrolla estándares para la Web.", "traduccion": "Consorcio internacional que desarrolla estándares web.", "correcta": true},
+        {"id": 2, "enunciado": "World Web Computer, un sistema operativo para Internet.", "traduccion": "Sistema operativo para ordenadores conectados a Internet.", "correcta": false},
+        {"id": 3, "enunciado": "Web World Communication, una empresa de alojamiento web.", "traduccion": "Empresa de alojamiento de páginas web.", "correcta": false},
+        {"id": 4, "enunciado": "Wide World Code, un lenguaje de programación.", "traduccion": "Lenguaje de programación para páginas web.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "El atributo alt de un elemento de imagen HTML <img />...",
+      "traduccion": "¿Para qué sirve el atributo alt de una imagen?",
+      "opciones": [
+        {"id": 1, "enunciado": "Define el texto alternativo que describe la imagen.", "traduccion": "Texto descriptivo alternativo de la imagen.", "correcta": true},
+        {"id": 2, "enunciado": "Indica la dirección URL de la imagen.", "traduccion": "Ruta del archivo de imagen.", "correcta": false},
+        {"id": 3, "enunciado": "Establece el tamaño máximo de la imagen.", "traduccion": "Límite de tamaño de la imagen.", "correcta": false},
+        {"id": 4, "enunciado": "Define el color de fondo de la imagen.", "traduccion": "Color de fondo de la imagen.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la WAI?",
+      "traduccion": "¿Qué significa Web Accessibility Initiative?",
+      "opciones": [
+        {"id": 1, "enunciado": "Una iniciativa del W3C dedicada a la accesibilidad web.", "traduccion": "Iniciativa para mejorar la accesibilidad de la Web.", "correcta": true},
+        {"id": 2, "enunciado": "Un programa para diseñar imágenes.", "traduccion": "Software de edición gráfica.", "correcta": false},
+        {"id": 3, "enunciado": "Un lenguaje de programación web.", "traduccion": "Lenguaje para desarrollar páginas web.", "correcta": false},
+        {"id": 4, "enunciado": "Un navegador de Internet.", "traduccion": "Programa para navegar por Internet.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes datos indica un ratio o relación de aspecto?",
+      "traduccion": "¿Qué valor representa una relación entre anchura y altura?",
+      "opciones": [
+        {"id": 1, "enunciado": "1920 px", "traduccion": "Mil novecientos veinte píxeles.", "correcta": false},
+        {"id": 2, "enunciado": "3:2", "traduccion": "Relación de aspecto de tres a dos.", "correcta": true},
+        {"id": 3, "enunciado": "300 dpi", "traduccion": "Trescientos puntos por pulgada.", "correcta": false},
+        {"id": 4, "enunciado": "#FFFFFF", "traduccion": "Código hexadecimal de color blanco.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "El atributo src de un elemento de imagen HTML <img />...",
+      "traduccion": "¿Para qué sirve el atributo src de una imagen?",
+      "opciones": [
+        {"id": 1, "enunciado": "Indica la URL o ruta de la imagen.", "traduccion": "Dirección del archivo de imagen.", "correcta": true},
+        {"id": 2, "enunciado": "Define el texto alternativo.", "traduccion": "Descripción alternativa de la imagen.", "correcta": false},
+        {"id": 3, "enunciado": "Indica el tamaño de la imagen.", "traduccion": "Dimensiones de la imagen.", "correcta": false},
+        {"id": 4, "enunciado": "Establece un enlace a otra página.", "traduccion": "Dirección de un hipervínculo.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Cómo se denomina el software que interpreta la información de archivos y sitios web para que puedan ser vistos por el usuario y que permite el acceso a Internet?",
+      "traduccion": "¿Qué programa permite visualizar páginas web?",
+      "opciones": [
+        {"id": 1, "enunciado": "Editor de imágenes.", "traduccion": "Programa para modificar imágenes.", "correcta": false},
+        {"id": 2, "enunciado": "Navegador o Browser.", "traduccion": "Programa para acceder y visualizar páginas web.", "correcta": true},
+        {"id": 3, "enunciado": "Compilador.", "traduccion": "Programa que transforma código fuente.", "correcta": false},
+        {"id": 4, "enunciado": "Procesador de textos.", "traduccion": "Programa para crear documentos de texto.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la Accesibilidad Web?",
+      "traduccion": "¿Qué significa que una página web sea accesible?",
+      "opciones": [
+        {"id": 1, "enunciado": "Que puede utilizarse por todas las personas, independientemente de sus capacidades.", "traduccion": "Eliminación de barreras para facilitar el acceso a todas las personas.", "correcta": true},
+        {"id": 2, "enunciado": "Que solamente puede visitarse desde un ordenador.", "traduccion": "Acceso exclusivo desde ordenadores.", "correcta": false},
+        {"id": 3, "enunciado": "Que tiene muchas imágenes y animaciones.", "traduccion": "Uso abundante de recursos visuales.", "correcta": false},
+        {"id": 4, "enunciado": "Que necesita una contraseña para visualizarse.", "traduccion": "Acceso protegido mediante contraseña.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "Algunas funciones de un editor de imágenes son...",
+      "traduccion": "¿Qué operaciones básicas permite realizar un editor de imágenes?",
+      "opciones": [
+        {"id": 1, "enunciado": "Recortar, redimensionar, rotar y voltear imágenes.", "traduccion": "Modificar el encuadre, tamaño y orientación de imágenes.", "correcta": true},
+        {"id": 2, "enunciado": "Crear formularios HTML.", "traduccion": "Diseñar formularios web.", "correcta": false},
+        {"id": 3, "enunciado": "Gestionar bases de datos.", "traduccion": "Administrar información estructurada.", "correcta": false},
+        {"id": 4, "enunciado": "Programar servidores web.", "traduccion": "Desarrollar aplicaciones de servidor.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "Para incluir imágenes en documentos HTML se emplea la etiqueta...",
+      "traduccion": "¿Qué etiqueta HTML permite insertar imágenes?",
+      "opciones": [
+        {"id": 1, "enunciado": "<picture>", "traduccion": "Elemento que permite ofrecer distintas fuentes de imagen.", "correcta": false},
+        {"id": 2, "enunciado": "<img />", "traduccion": "Elemento para insertar una imagen.", "correcta": true},
+        {"id": 3, "enunciado": "<image />", "traduccion": "Etiqueta incorrecta para insertar imágenes en HTML.", "correcta": false},
+        {"id": 4, "enunciado": "<src>", "traduccion": "Atributo que indica la ruta de un recurso.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes es un formato de vídeo?",
+      "traduccion": "¿Qué extensión corresponde a un formato de vídeo?",
+      "opciones": [
+        {"id": 1, "enunciado": "JPG", "traduccion": "Formato de imagen.", "correcta": false},
+        {"id": 2, "enunciado": "MP4", "traduccion": "Formato contenedor multimedia de vídeo y audio.", "correcta": true},
+        {"id": 3, "enunciado": "PNG", "traduccion": "Formato de imagen.", "correcta": false},
+        {"id": 4, "enunciado": "TXT", "traduccion": "Formato de texto plano.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Qué elemento debe ir siempre en nuestro documento web para que sea validado y que especifica en qué código está desarrollado?",
+      "traduccion": "¿Qué declaración identifica el tipo de documento HTML?",
+      "opciones": [
+        {"id": 1, "enunciado": "DOCTYPE", "traduccion": "Declaración del tipo de documento.", "correcta": true},
+        {"id": 2, "enunciado": "BODY", "traduccion": "Elemento que contiene el contenido visible.", "correcta": false},
+        {"id": 3, "enunciado": "SCRIPT", "traduccion": "Elemento para incluir código ejecutable.", "correcta": false},
+        {"id": 4, "enunciado": "FOOTER", "traduccion": "Elemento que representa el pie de página.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes programas NO es un editor de imágenes?",
+      "traduccion": "¿Qué programa no está diseñado para editar imágenes?",
+      "opciones": [
+        {"id": 1, "enunciado": "GIMP", "traduccion": "Programa de edición de imágenes.", "correcta": false},
+        {"id": 2, "enunciado": "Adobe Photoshop", "traduccion": "Software de edición fotográfica.", "correcta": false},
+        {"id": 3, "enunciado": "Notepad++", "traduccion": "Editor de texto y código fuente.", "correcta": true},
+        {"id": 4, "enunciado": "Paint", "traduccion": "Programa básico de dibujo y edición de imágenes.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "Si un documento HTML es HTML5...?",
+      "traduccion": "¿Qué declaración debe aparecer al principio de un documento HTML5?",
+      "opciones": [
+        {"id": 1, "enunciado": "La etiqueta <html> debe ser siempre la primera línea.", "traduccion": "El elemento raíz debe aparecer antes de cualquier declaración.", "correcta": false},
+        {"id": 2, "enunciado": "La etiqueta <!DOCTYPE html> debe aparecer al principio, antes de <html>.", "traduccion": "Declaración HTML5 al inicio del documento.", "correcta": true},
+        {"id": 3, "enunciado": "Debe incluirse la etiqueta <html5>.", "traduccion": "Uso de una etiqueta HTML5 inexistente.", "correcta": false},
+        {"id": 4, "enunciado": "Debe comenzar con la etiqueta <body>.", "traduccion": "Inicio del documento directamente con el cuerpo.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Cuál de los siguientes programas NO es un editor de texto?",
+      "traduccion": "¿Qué programa está especializado en la edición de imágenes y no de texto?",
+      "opciones": [
+        {"id": 1, "enunciado": "Bloc de notas", "traduccion": "Editor de texto plano.", "correcta": false},
+        {"id": 2, "enunciado": "Notepad++", "traduccion": "Editor de texto y código fuente.", "correcta": false},
+        {"id": 3, "enunciado": "Visual Studio Code", "traduccion": "Editor de código fuente.", "correcta": false},
+        {"id": 4, "enunciado": "GIMP", "traduccion": "Editor de imágenes digitales.", "correcta": true}
+      ]
+    },
+    {
+      "pregunta": "¿Qué es la Usabilidad Web?",
+      "traduccion": "¿Qué se entiende por usabilidad web?",
+      "opciones": [
+        {"id": 1, "enunciado": "La facilidad con la que los usuarios pueden interactuar con una web para lograr sus objetivos.", "traduccion": "Facilidad, eficacia y satisfacción durante el uso de una página web.", "correcta": true},
+        {"id": 2, "enunciado": "La cantidad de imágenes que contiene una página.", "traduccion": "Número de imágenes de un sitio web.", "correcta": false},
+        {"id": 3, "enunciado": "La velocidad de descarga de archivos exclusivamente.", "traduccion": "Rapidez de descarga de archivos.", "correcta": false},
+        {"id": 4, "enunciado": "La posibilidad de utilizar únicamente dispositivos móviles.", "traduccion": "Compatibilidad exclusiva con móviles.", "correcta": false}
+      ]
+    },
+    {
+      "pregunta": "¿Cuál es la principal función de un editor de texto plano?",
+      "traduccion": "¿Para qué se utiliza principalmente un editor de texto plano?",
+      "opciones": [
+        {"id": 1, "enunciado": "Editar texto sin formato, como código o scripts.", "traduccion": "Crear y modificar documentos de texto sin formato.", "correcta": true},
+        {"id": 2, "enunciado": "Editar fotografías y aplicar filtros.", "traduccion": "Modificar imágenes digitales.", "correcta": false},
+        {"id": 3, "enunciado": "Reproducir archivos multimedia.", "traduccion": "Reproducir audio y vídeo.", "correcta": false},
+        {"id": 4, "enunciado": "Diseñar modelos tridimensionales.", "traduccion": "Crear objetos y escenas en 3D.", "correcta": false}
+      ]
+    }
+  ]
+}
